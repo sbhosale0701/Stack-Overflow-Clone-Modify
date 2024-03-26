@@ -1,0 +1,28 @@
+// ------- User list ---------
+.user-list-container {
+    padding: 30px 0px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 30px;
+}
+
+// _---- Single User ---------
+.user-profile-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+    color: black;
+
+    h3 {
+        padding: 10px 16px;
+        background-color: #d3d3d3;
+        border-radius: 50%;
+        font-size: revert;
+    }
+
+    h5 {
+        margin: 0px 10px;
+        font-size: revert;
+    }
+}

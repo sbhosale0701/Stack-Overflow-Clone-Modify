@@ -1,0 +1,62 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
+import React, { useState } from "react";
+import { useSelector } from "react-redux";
+import { useParams } from "react-router";
+import moment from "moment";
+
+// Components
+import LeftsideBar from "../../components/LeftsideBar/LeftsideBar";
+import Avatar from "../../components/Avatar/Avatar";
+import EditProfileForm from "./EditProfileForm";
+import ProfileBio from "./ProfileBio";
+
+// Stylesheet
+import "./profile_style.scss";
+const UserProfile = ({ slideIn, handleSlideIn }) => {
+  const { id } = useParams();
+  const users = useSelector((state) => state.usersReducer);
+  const currentProfile = users.filter((user) => user._id === id)[0];
+  const currentUser = useSelector((state) => state.currentUserReducer);
+  const [Switch, setSwitch] = useState(false);
+
+  return (
+    <div className="home-container-1">
+      <LeftsideBar slideIn={slideIn} handleSlideIn={handleSlideIn} />
+      <div className="home-container-2">
+        <section style={{ width: "calc(100% - 300px - 24px)" }}>
+          <div className="user-details-container">
+            <div className="user-details">
+              <Avatar backgroundColor="purple" color="white" fontSize="50px" px="40px" py="30px">
+                {currentProfile?.name.charAt(0).toUpperCase()}
+              </Avatar>
+              <div className="user-name">
+                <h1>{currentProfile?.name}</h1>
+                <p>
+                  <i className="ri-cake-2-fill"></i> Joined{" "}
+                  {moment(currentProfile?.joinedOn).fromNow()}
+                </p>
+              </div>
+            </div>
+            {/* if it is the user himself then s/he can see edit option or not */}
+            {currentUser?.result._id === id && (
+              <button type="button" onClick={() => setSwitch(true)} className="edit-profile-btn">
+                <i className="ri-edit-2-fill"></i> Edit Profile
+              </button>
+            )}
+          </div>
+          <>
+            {/* If Click edit come Form or not */}
+            {Switch ? (
+              <EditProfileForm currentUser={currentUser} setSwitch={setSwitch} />
+            ) : (
+              <ProfileBio currentProfile={currentProfile} />
+            )}
+          </>
+        </section>
+      </div>
+    </div>
+  );
+};
+
+export default UserProfile;

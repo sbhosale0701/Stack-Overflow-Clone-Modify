@@ -1,0 +1,13 @@
+// Right Side bar Style
+.right-sidebar {
+    // float: right;
+    width: 300px;
+    margin: 0 0.4rem 15px 14px;
+    font-size: 13px;
+}
+
+@media screen and (max-width: 1020px) {
+    .right-sidebar {
+        display: none;
+    }
+}

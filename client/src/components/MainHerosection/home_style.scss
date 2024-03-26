@@ -1,0 +1,45 @@
+.main-bar {
+    width: calc(100% - 300px - 24px);
+    // float: left;
+    // margin: 25px 0px;
+    padding: 0;
+
+
+    h1 {
+        font-size: revert;
+        font-weight: revert;
+    }
+
+
+    .main-bar-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h1 {
+            font-weight: 400;
+        }
+
+        .ask-btn {
+            padding: 10px 15px;
+            border-radius: 4px;
+            background-color: #009dff;
+            color: white;
+            border: none;
+            text-decoration: none;
+            transition: 0.3s;
+
+            &:hover {
+                background-color: #0182d3;
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    .main-bar {
+        width: 100%;
+        padding-right: 1rem;
+    }
+}
