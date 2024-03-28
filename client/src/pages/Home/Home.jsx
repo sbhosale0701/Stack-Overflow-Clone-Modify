@@ -6,7 +6,7 @@ import "../../App.css";
 // import Components
 import LeftsideBar from "../../components/LeftsideBar/LeftsideBar";
 import HomeMainbar from "../../components/MainHerosection/HomeMainbar";
-import RightSideBar from "../../components/RIghtsideBar/RightSideBar";
+import RightSideBar from "../../components/RIghtsideBar/RightsideBar";
 const Home = ({ slideIn }) => {
   return (
     <div className="home-container-1">
