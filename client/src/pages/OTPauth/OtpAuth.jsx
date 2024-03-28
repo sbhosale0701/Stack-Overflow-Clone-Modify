@@ -11,7 +11,7 @@ import { numberSend, otpSend } from "../../actions/verify";
 import "./style.scss";
 
 // components
-import AuthDetails from "./authDetails";
+import AuthDetails from "./AuthDetails";
 
 const OtpAuth = () => {
   // Input Variables
