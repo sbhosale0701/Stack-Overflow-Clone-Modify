@@ -3,7 +3,7 @@
 import React from "react";
 
 import LeftsideBar from "../../components/LeftsideBar/LeftsideBar";
-import RightSideBar from "../../components/RIghtsideBar/RightSideBar";
+import RightSideBar from "../../components/RightsideBar/RightsideBar";
 import HomeMainbar from "../../components/MainHerosection/HomeMainbar";
 
 const Questions = ({ slideIn, handleSlideIn }) => {
