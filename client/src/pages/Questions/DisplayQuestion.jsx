@@ -4,7 +4,7 @@ import React from "react";
 
 import HomeMainbar from "../../components/MainHerosection/HomeMainbar";
 import LeftsideBar from "../../components/LeftsideBar/LeftsideBar";
-import RightSideBar from "../../components/RightsideBar/RightSideBar";
+import RightSideBar from "../../components/RightsideBar/RightsideBar";
 import QuestionDetails from "./QuestionDetails";
 
 const DisplayQuestion = ({ slideIn, handleSlideIn }) => {
