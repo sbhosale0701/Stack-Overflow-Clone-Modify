@@ -12,7 +12,6 @@
             font-weight: 700;
             font-style: italic;
 
-
             h4 {
                 font-size: 0.7rem;
                 display: inline;
@@ -37,5 +36,28 @@
                 color: #ff1800;
             }
         }
+    }
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 820px) {
+    .details_container .price_details .pack_tag {
+        font-size: 1.2rem; /* Decrease font size for smaller screens */
+    }
+
+    .details_container .price_details .price_tag {
+        font-size: 2rem; /* Decrease font size for smaller screens */
+    }
+
+    .details_container .price_details .price_tag h4 {
+        font-size: 0.6rem; /* Decrease font size for smaller screens */
+    }
+
+    .details_container .pack_details {
+        margin: 1rem 0; /* Adjust margin for smaller screens */
+    }
+
+    .details_container .pack_details .details_line {
+        padding: 0.3rem 0; /* Adjust padding for smaller screens */
     }
 }

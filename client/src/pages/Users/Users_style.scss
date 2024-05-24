@@ -1,12 +1,12 @@
-// ------- User list ---------
+/* User List */
 .user-list-container {
-    padding: 30px 0px;
+    padding: 20px 0px; /* Adjust padding for smaller screens */
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Adjust column width for smaller screens */
+    gap: 20px; /* Adjust gap between items for smaller screens */
 }
 
-// _---- Single User ---------
+/* Single User */
 .user-profile-link {
     display: flex;
     align-items: center;
@@ -15,14 +15,31 @@
     color: black;
 
     h3 {
-        padding: 10px 16px;
+        padding: 8px 12px; /* Adjust padding for smaller screens */
         background-color: #d3d3d3;
         border-radius: 50%;
-        font-size: revert;
+        font-size: 16px; /* Adjust font size for smaller screens */
     }
 
     h5 {
-        margin: 0px 10px;
-        font-size: revert;
+        margin: 0px 8px; /* Adjust margin for smaller screens */
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+    .user-list-container {
+        gap: 15px; /* Adjust gap between items for smaller screens */
+    }
+
+    .user-profile-link h3 {
+        padding: 6px 10px; /* Further adjust padding for smaller screens */
+        font-size: 14px; /* Further adjust font size for smaller screens */
+    }
+
+    .user-profile-link h5 {
+        margin: 0px 6px; /* Further adjust margin for smaller screens */
+        font-size: 14px; /* Further adjust font size for smaller screens */
     }
 }

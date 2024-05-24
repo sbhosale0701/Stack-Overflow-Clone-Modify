@@ -23,7 +23,6 @@
 
             &:hover {
                 transform: scale(1.02);
-
             }
 
             .plan_submit {
@@ -40,5 +39,22 @@
                 }
             }
         }
+    }
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 820px) {
+    .container .Pack_container {
+        flex-direction: column; /* Change flex direction to column for smaller screens */
+        align-items: center; /* Center-align items on smaller screens */
+    }
+
+    .container .Pack_container .pack_box {
+        width: 80%; /* Reduce width of pack boxes for better spacing on smaller screens */
+        margin-bottom: 2rem; /* Add margin bottom for better separation between pack boxes */
+    }
+
+    .container .Pack_container .pack_box .plan_submit {
+        padding: 0.7rem 1.5rem; /* Adjust padding for submit button on smaller screens */
     }
 }

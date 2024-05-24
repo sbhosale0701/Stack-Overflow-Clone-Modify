@@ -1,15 +1,30 @@
+/* Home Container 1 */
 .home-container-1 {
   min-height: 100vh;
   max-width: 95vw;
   width: 100%;
   display: flex;
   justify-content: space-between;
-  /* margin: 5rem auto 0% auto; */
-  margin: 0% auto;
+  margin: 0 auto; /* Center the container horizontally */
 }
 
+/* Home Container 2 */
 .home-container-2 {
   width: 100%;
   display: flex;
-  margin: 5rem 0 0 1rem;
+  margin: 3rem 0 0 1rem; /* Adjust top margin for smaller screens */
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+  .home-container-1 {
+    flex-direction: column; /* Stack the items vertically on smaller screens */
+    align-items: center; /* Center the items horizontally on smaller screens */
+  }
+
+  .home-container-2 {
+    margin-top: 2rem; /* Further adjust top margin for smaller screens */
+    margin-left: 0; /* Remove left margin for smaller screens */
+    justify-content: center; /* Center the items horizontally on smaller screens */
+  }
 }

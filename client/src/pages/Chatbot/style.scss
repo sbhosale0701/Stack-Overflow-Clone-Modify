@@ -8,7 +8,6 @@ Mixins
     transform: translate(-50%, -50%);
 }
 
-
 /*--------------------
 Body
 --------------------*/
@@ -23,13 +22,13 @@ Body
     transform: scale(1.2);
 }
 
-
 /*--------------------
 Chat
 --------------------*/
 .chat {
     @include center;
-    width: 300px;
+    width: 90%; /* Adjusted width for responsiveness */
+    max-width: 400px; /* Maximum width for larger screens */
     height: 80vh;
     max-height: 500px;
     z-index: 2;
@@ -46,7 +45,6 @@ Chat
     overflow: hidden;
 }
 
-
 /*--------------------
 Chat Title
 --------------------*/
@@ -58,7 +56,7 @@ Chat Title
     color: black;
     text-transform: uppercase;
     text-align: left;
-    padding: 10px 10px 10px 50px;
+    padding: 10px;
 
     h1,
     h2 {
@@ -94,7 +92,6 @@ Chat Title
     }
 }
 
-
 /*--------------------
 Messages
 --------------------*/
@@ -112,7 +109,6 @@ Messages
         height: 101%;
         width: 100%;
     }
-
 
     .message {
         clear: both;
@@ -190,22 +186,16 @@ Messages
         }
 
         &.loading {
-
-
             & span {
                 display: block;
                 font-size: 0;
                 width: 20px;
                 height: 10px;
                 position: relative;
-
-
             }
         }
-
     }
 }
-
 
 /*--------------------
 Message Box
@@ -249,15 +239,13 @@ Message Box
         transition: background .2s ease;
 
         &:hover {
-            // background: #f58003ca;
             color: #f58003ca;
         }
     }
 }
 
-
 /*--------------------
-Custom Srollbar
+Custom Scrollbar
 --------------------*/
 .mCSB_scrollTools {
     margin: 1px -3px 1px 0;
@@ -273,9 +261,8 @@ Custom Srollbar
     background-color: rgba(0, 0, 0, 0.5) !important;
 }
 
-
 /*--------------------
-Bounce
+Bounce Animation
 --------------------*/
 @keyframes bounce {
     0% {
@@ -328,5 +315,12 @@ Bounce
 
     100% {
         transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+}
+
+/* Media Query for responsiveness */
+@media screen and (max-width: 768px) {
+    .chat {
+        width: 95%; /* Adjusted width for smaller screens */
     }
 }

@@ -1,14 +1,15 @@
-// ---------User Profile---------
+/* User Profile */
 .user-details-container {
     width: 100%;
     margin-top: 0.8rem;
     display: flex;
-    align-items: flex-start;
+    flex-wrap: wrap; /* Wrap items for smaller screens */
+    align-items: center;
     justify-content: space-between;
 
     .user-details {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
 
         .user-name {
             padding-left: 20px;
@@ -31,16 +32,11 @@
         background-color: white;
         cursor: pointer;
         transition: 0.3s;
-
-        &:hover {
-            background-color: #f5f9fc;
-        }
+        margin-top: 10px; /* Add margin-top for better spacing */
     }
 }
 
-// ___------------ Edit Profile----------------
-
-
+/* Edit Profile */
 .edit-profile-title {
     padding: 20px 0px;
     border-bottom: solid 1px #dbd9d9;
@@ -72,18 +68,23 @@
             padding: 5px;
             margin-bottom: 20px;
             border: solid 1px #dbd9d9;
-            width: 50%;
+            width: 100%; /* Make input fields full-width */
         }
     }
 
-    .user-submit-btn {
+    .user-submit-btn,
+    .user-cancel-btn {
         padding: 14px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.2s;
+        width: 100%; /* Make buttons full-width */
+    }
+
+    .user-submit-btn {
         background-color: #0a95ff;
         color: white;
         border: none;
-        border-radius: 5px;
-        transition: 0.2s;
-        cursor: pointer;
 
         &:hover {
             background-color: #0074cc;
@@ -91,13 +92,26 @@
     }
 
     .user-cancel-btn {
-        padding: 14px 10px;
         color: #0a95ff;
         background-color: transparent;
         border: none;
-        margin-left: 10px;
-        cursor: pointer;
+        margin-top: 10px; /* Add margin-top for better spacing */
+    }
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+    .user-details-container .user-details {
+        flex-direction: column; /* Stack user details vertically for smaller screens */
+        align-items: flex-start;
     }
 
+    .user-details-container .edit-profile-btn {
+        margin-top: 0.5rem; /* Adjust margin-top for edit profile button */
+    }
 
+    .edit-profile-form label input,
+    .edit-profile-form label textarea {
+        width: 100%; /* Make input fields full-width on smaller screens */
+    }
 }
